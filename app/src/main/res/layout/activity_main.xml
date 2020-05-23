@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/mainLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:background="@drawable/background_shape"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- info text-->
+    <TextView
+        android:id="@+id/first_layout_tv"
+        android:drawableStart="@drawable/info_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/info_shape"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/first_screen_info"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:minLines="3" />
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_above="@id/floatingActionButton"
+       android:layout_below="@id/first_layout_tv"
+       android:layout_margin="10dp"
+       android:scrollbarStyle="outsideInset"
+       android:verticalScrollbarPosition="right"
+       android:fadeScrollbars="false"
+       android:scrollbarTrackVertical="@color/grayApp"
+       android:scrollbarSize="5dp"
+       android:scrollbarThumbVertical="@color/colorPrimary"
+       android:scrollbars="vertical"
+       android:scrollbarAlwaysDrawVerticalTrack="false"
+       android:padding="5dp">
+
+       <LinearLayout
+           android:id="@+id/first_layout_ll"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="10dp"
+           android:background="@drawable/edit_text_selector">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:baselineAligned="false">
+
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   style="@style/text_input_layout">
+
+                   <EditText
+                       android:id="@+id/et_first_name"
+                       android:maxLines="1"
+                       android:inputType="textCapWords"
+                       android:hint="@string/first_name"
+                       android:singleLine="true"
+                       style="@style/edit_text_style"
+                       android:nextFocusDown="@id/et_last_name"
+                       android:importantForAutofill="no"
+                       android:focusedByDefault="true"/>
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   style="@style/text_input_layout">
+
+                   <EditText
+                       android:id="@+id/et_last_name"
+                       android:maxLines="1"
+                       android:inputType="textCapWords"
+                       android:hint="@string/last_name"
+                       style="@style/edit_text_style"
+                       android:nextFocusDown="@id/et_id"
+                       android:importantForAutofill="no" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+           </LinearLayout> <!--first and last name-->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:baselineAligned="false">
+
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="2"
+                   style="@style/text_input_layout">
+
+                   <EditText
+                       android:id="@+id/et_id"
+                       android:hint="@string/id_number"
+                       android:maxLines="1"
+                       android:inputType="number"
+                       style="@style/edit_text_style"
+                       android:importantForAutofill="no"
+                       android:imeOptions="actionDone"/>
+
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+
+           </LinearLayout> <!--ID Number-->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginHorizontal="7dp"
+               android:layout_marginTop="15dp">
+
+               <Spinner
+                   android:id="@+id/kupa_spinner"
+                   android:layout_width="0dp"
+                   android:layout_height="40dp"
+                   android:layout_weight="1"
+                   android:textSize="18sp"
+                   android:gravity="center"
+                   android:popupBackground="@drawable/edit_text_selector"
+                   android:background="@drawable/edit_text_selector" />
+
+
+               <EditText
+                   android:id="@+id/et_kupa"
+                   android:layout_height="match_parent"
+                   android:padding="5dp"
+                   android:layout_width="0dp"
+                   android:layout_marginStart="10dp"
+                   android:layout_weight="1"
+                   android:hint="@string/elaborate"
+                   android:nextFocusDown="@id/et_city"
+                   android:background="@drawable/edit_text_enabled_selector"
+                   android:visibility="gone"
+                   android:importantForAutofill="no"
+                   android:inputType="textCapWords" />
+
+           </LinearLayout> <!--kupa-->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:baselineAligned="false">
+
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="2"
+                   style="@style/text_input_layout">
+
+                   <EditText
+                       android:id="@+id/et_city"
+                       android:maxLines="1"
+                       android:inputType="textCapWords"
+                       android:hint="@string/city"
+                       style="@style/edit_text_style"
+                       android:nextFocusDown="@id/et_street"
+                       android:importantForAutofill="no" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="3"
+                   style="@style/text_input_layout">
+
+                   <EditText
+                       android:id="@+id/et_street"
+                       android:maxLines="1"
+                       android:inputType="textCapWords"
+                       android:hint="@string/street"
+                       style="@style/edit_text_style"
+                       android:importantForAutofill="no" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+
+           </LinearLayout> <!--full address-->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:baselineAligned="false">
+
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="2"
+                   style="@style/text_input_layout">
+
+                   <EditText
+                       android:id="@+id/et_phone_number"
+                       android:maxLines="1"
+                       android:hint="@string/phone_number"
+                       android:inputType="phone"
+                       style="@style/edit_text_style"
+                       android:importantForAutofill="no" />
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+
+           </LinearLayout> <!--Phone Number-->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginVertical="10dp">
+
+               <TextView
+                   android:id="@+id/birth_year_tv"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="3"
+                   android:gravity="center"
+                   android:layout_margin="7dp"
+                   android:textSize="18sp"
+                   android:padding="10dp"
+                   android:text="@string/birth_year"
+                   android:textColor="?android:textColorHint"
+                   android:background="@drawable/edit_text_selector"
+                   android:layout_gravity="center"/>
+
+               <Spinner
+                   android:id="@+id/gender_spinner"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="2"
+                   android:layout_margin="7dp"
+                   android:textSize="18sp"
+                   android:gravity="center"
+                   android:popupBackground="@drawable/edit_text_selector"
+                   android:background="@drawable/edit_text_selector"/>
+
+
+
+           </LinearLayout> <!--Birth year and gender-->
+
+       </LinearLayout>
+
+   </ScrollView>
+
+    <!--Next Button-->
+    <Button
+        android:id="@+id/nextBtn1"
+        android:drawableEnd="@drawable/next_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/next"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background = "@drawable/btn_selector"/>
+
+    <!--Info Button-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/help_icon"
+        app:backgroundTint="#FB7468"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        tools:ignore="KeyboardInaccessibleWidget,VectorDrawableCompat"
+        app:fabSize="normal"
+        app:maxImageSize="40dp"
+        android:layout_margin="10dp" />
+
+    <!--Info Screen-->
+    <LinearLayout
+        android:id="@+id/help_popup"
+        android:layout_height="500dp"
+        android:layout_width="350dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pop_up_shape"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginVertical="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="40dp"
+            android:text="@string/info_text"
+            android:textColor="#6C6666"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+</LinearLayout>
+
+
+</RelativeLayout>

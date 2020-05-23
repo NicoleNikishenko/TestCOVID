@@ -1,0 +1,53 @@
+<resources>
+
+
+    <string name="app_name">TestCOVID</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="birth_year">Birth Year</string>
+    <string name="hmo_kupa">HMO (Kupa)</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="city">City</string>
+    <string name="street">Address</string>
+    <string name="number">Number</string>
+    <string name="first_screen_info">Please enter the personal information of the person who would like to be tested</string>
+    <string name="id_number">ID Num</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="macabi">Macabi</string>
+    <string name="leumit">Leumit</string>
+    <string name="clalit">Clalit</string>
+    <string name="meuhedet">Meuhedet</string>
+    <string name="other">Other</string>
+    <string name="none">None</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="yes">Yes</string>
+    <string name="no">"No  "</string>
+    <string name="question1">Do you suffer from a cough?</string>
+    <string name="question2">Do you suffer from  shortness of breath or difficulty breathing?</string>
+    <string name="question3">Have you had a temperature of 38°C or higher?</string>
+    <string name="question4">Have you had any other symptoms?</string>
+    <string name="question5">Do you have underlying health conditions?</string>
+    <string name="question6">Do you take any medication regularly?</string>
+    <string name="question7">Are you required to self-isolation?</string>
+    <string name="second_screen_info">Please answer a few questions about your current health condition and medical history</string>
+    <string name="elaborate">Elaborate:</string>
+    <string name="accept">Accept</string>
+    <string name="third_screen_info">"Please provide the personal information of the people in your household to let us know if additional tests are needed  "</string>
+    <string name="age">Age</string>
+    <string name="must_enter">"Must Enter "</string>
+    <string name="must_elaborate">Please Elaborate</string>
+    <string name="agree_statement">I confirm that the information given in this form is true, complete and accurate</string>
+    <string name="send">End</string>
+    <string name="main_screen">Main Screen</string>
+    <string name="sent">Your information has been sent</string>
+    <string name="last_question">Not counting yourself, how many people are in your household?</string>
+    <string name="info_text">We at TestCOVID provide you a simple and convenient way to order a COVID-19 test directly to your home!</string>
+    <string name="end_text2">Please notice – The tests are distributed according to the available tests and the symptoms you provided\nBe patient, we will contact you soon.</string>
+    <string name="end_text">We got your request!</string>
+    <string name="cancel">Cancel</string>
+
+
+</resources>

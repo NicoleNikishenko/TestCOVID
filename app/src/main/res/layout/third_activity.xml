@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/background_shape"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout">
+
+    <!-- info Text -->
+    <TextView
+        android:id="@+id/info_tv"
+        android:drawableStart="@drawable/info_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/info_shape"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/third_screen_info"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/edit_text_selector"
+        android:layout_marginVertical="5dp"
+        android:layout_below="@+id/info_tv"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/question_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_question"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textColor="#000"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/siblings_et"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@drawable/edit_text_selector"
+                android:imeOptions="actionDone"/>
+
+            <Button
+                android:id="@+id/accept"
+                android:text="@string/accept"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_selector"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/question_layout"
+        android:layout_above="@id/nextBtn3"
+        android:layout_marginVertical="10dp"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:fadingEdgeLength="10dp"
+        android:scrollbarStyle="outsideInset"
+        android:verticalScrollbarPosition="right"
+        android:fadeScrollbars="false"
+        android:scrollbarTrackVertical="@color/grayApp"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@color/colorPrimary"
+
+        android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="3dp"
+                android:id="@+id/siblings_layout">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- Next and Back buttons -->
+    <Button
+        android:id="@+id/backBtn3"
+        android:drawableStart="@drawable/back_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/back"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_selector"/>
+    <Button
+        android:id="@+id/nextBtn3"
+        android:drawableEnd="@drawable/next_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/next"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background = "@drawable/btn_selector" />
+
+    <!--Agree Screen-->
+    <RelativeLayout
+        android:id="@+id/agree_popup"
+        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pop_up_shape"
+        android:visibility="gone"
+        android:padding="10dp">
+
+
+     <LinearLayout
+        android:id="@+id/agree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:buttonTint="@color/colorPrimary"/>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/agree_statement"
+            android:textColor="#4A4949"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingStart="7dp"/>
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_below="@id/agree"
+            android:layout_alignParentStart="true"
+            android:text="@string/cancel"
+            android:padding="10dp"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_selector"/>
+        <Button
+            android:id="@+id/end_btn"
+            android:layout_below="@id/agree"
+            android:layout_alignParentEnd="true"
+            android:text="@string/send"
+            android:padding="10dp"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background = "@drawable/btn_selector"
+            android:enabled="false"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
